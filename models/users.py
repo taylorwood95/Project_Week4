@@ -2,4 +2,4 @@ class User:
 
     def __init__(self, name, id = None):
         self.name = name
-        self.id - id
+        self.id = id
