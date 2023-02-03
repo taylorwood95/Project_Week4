@@ -11,7 +11,7 @@ def save(user):
     user.id = id
     return user
 
-# This functions selects all users and creates a new list with users
+# This function selects all users and creates a new list with users
 
 def select_all():
     users = []
@@ -23,3 +23,23 @@ def select_all():
         user = User(row['name'], row['id'])
         users.append(user)
     return users
+
+# This function selects a specific user by ID
+
+def select(id):
+    user = None
+    sql = "SELECT * FROM users WHERE id = %s"
+    values =  [id]
+    results = run_sql(sql, values)
+
+    if results:
+        result = results[0]
+        user =  User(result['name'], result['id'])
+    return user
+
+# This function deletes a specific user by iID
+
+def delete(id):
+    sql = "DELETE FROM users WHERE  id = %s"
+    values = [id]
+    run_sql(sql,values)
