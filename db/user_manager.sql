@@ -11,6 +11,8 @@ CREATE TABLE countries (
     name VARCHAR (255),
     capital VARCHAR (255),
     currency VARCHAR (255),
-    review text
+    review text,
+    user_id INT NOT NULL REFERENCES users(id)
+
 );
 

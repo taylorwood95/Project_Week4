@@ -1,6 +1,5 @@
 class Country:
-
-    def __inti__(self, name, capital, currency, review, user, id = None):
+    def __init__(self, name, capital, currency, review, user, id=None):
         self.name = name
         self.capital = capital
         self.currency = currency
