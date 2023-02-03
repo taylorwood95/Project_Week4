@@ -14,6 +14,8 @@ def save(country):
     country.id = id
     return country
 
+# Thus function selects all countries and creates a list of them
+
 def select_all():
     countries = []
 
@@ -25,3 +27,25 @@ def select_all():
         country = Country(row['name'], row['capital'], row['currency'], row['review'], country_id)
         countries.append(country)
     return countries
+
+# This function selects a specific country by ID
+
+def select(id):
+    country = None 
+    sql = "SELECT * FROM countries WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    if results:
+        result = results [0]
+        country_id = user_repository.select(result['user_id'])
+        country = Country(result['name'], result['capital'], result['currency'], result['review'], country_id, result['id'])
+    return country
+
+# This function deletes a specifiv country by ID
+
+def delete(id):
+    sql = "DELETE FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+

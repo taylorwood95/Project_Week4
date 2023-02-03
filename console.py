@@ -26,3 +26,8 @@ import repositories.user_repository as user_repository
 
 # country_repository.select_all()
 # pdb.set_trace()
+
+# country_repository.select(5)
+# pdb.set_trace()
+
+# country_repository.delete(5)
