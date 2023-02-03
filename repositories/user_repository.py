@@ -4,7 +4,7 @@ from models.users import User
 # This function saves new users to database
 
 def save(user):
-    sql = "INSERt INTO users (name) VALUES (%s) RETURNING *"
+    sql = "INSERT INTO users (name) VALUES (%s) RETURNING *"
     values = [user.name]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -37,9 +37,16 @@ def select(id):
         user =  User(result['name'], result['id'])
     return user
 
-# This function deletes a specific user by iID
+# This function deletes a specific user by ID
 
 def delete(id):
     sql = "DELETE FROM users WHERE  id = %s"
     values = [id]
     run_sql(sql,values)
+
+# This functions allows you to edit user by ID
+
+def update(user):
+    sql = "UPDATE users SET name = %s WHERE id = %s"
+    values = [user.name, user.id]
+    run_sql(sql, values)

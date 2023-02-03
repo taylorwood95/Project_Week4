@@ -14,4 +14,9 @@ user_repository.save(user2)
 
 # result = user_repository.select(5)
 
-user_repository.delete(5)
+# user_repository.delete(5)
+
+user3 = user_repository.select(6)
+user3.name = "Brian"
+user_repository.update(user3)
+
