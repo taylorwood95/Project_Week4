@@ -32,7 +32,7 @@ import repositories.user_repository as user_repository
 
 # country_repository.delete(5)
 
-country3 = country_repository.select(3)
-country3.capital = 'The Hague'
-country_repository.update(country3)
+# country3 = country_repository.select(3)
+# country3.capital = 'The Hague'
+# country_repository.update(country3)
 
