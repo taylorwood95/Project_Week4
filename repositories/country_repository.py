@@ -49,3 +49,9 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+# This function allows you to edit a country by ID 
+
+def update(country):
+    sql = "UPDATE countries SET (name, capital, currency, review, user_id) = (%s,%s,%s,%s,%s) WHERE id = %s"
+    values = [country.name, country.capital, country.currency, country.review, country.user.id, country.id]
+    run_sql(sql, values)
