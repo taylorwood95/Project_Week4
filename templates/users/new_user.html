@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/users" method="post">
+    <div>
+        <label for="user">Name:</label>
+        <select id="user" name="user_id">
+            {% for user in all_users %}
+            <option value="{{ user.id }}">{{ user.name }}</option>
+        </select>
+    </div>
+
+    <button type="submit">Add Name</button>
+
+</form>
+
+{% endblock %}
