@@ -12,7 +12,8 @@ def save(country):
 
     results = run_sql(sql, values)
     country.id = results[0]['id']
-    
+   
+
     return country
 
 # Thus function selects all countries and creates a list of them
@@ -26,7 +27,10 @@ def select_all():
     for row in results:
         country_id  = user_repository.select(row['user_id'])
         country = Country(row['name'], row['capital'], row['currency'], row['review'], country_id)
+    
         countries.append(country)
+      
+        
     return countries
 
 # This function selects a specific country by ID

@@ -29,7 +29,7 @@ country_repository.save(country2)
 # pdb.set_trace()
 
 # country_repository.select(5)
-# pdb.set_trace()
+pdb.set_trace()
 
 # country_repository.delete(5)
 
