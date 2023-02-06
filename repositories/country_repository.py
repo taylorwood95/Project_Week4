@@ -25,8 +25,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country_id  = user_repository.select(row['user_id'])
-        country = Country(row['name'], row['capital'], row['currency'], row['review'], country_id)
+        user  = user_repository.select(row['user_id'])
+        country = Country(row['name'], row['capital'], row['currency'], row['review'], user, row['id'])
     
         countries.append(country)
       

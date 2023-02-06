@@ -28,7 +28,6 @@
 Country: {{ country.name }} 
 Capital: {{ country.capital }} 
 Currency: {{ country.currency }} 
-id: {{ country.id }} 
 Review: {{
     country.review }}
 
@@ -41,6 +40,6 @@ Review: {{
     <button class="delete_country_button" type="submit">Delete Country:</button>
 </form>
 
-<a href="/countries/{{ country.id }}/edit">Edit Destination</a>
+<a href="/countries/{{country.id}}/edit">Edit Destination</a>
 
 {% endfor %} {% endblock %}
