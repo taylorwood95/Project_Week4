@@ -1,17 +1,20 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
+
 {% block content %}
 
 <form action="/users" method="post">
-    <div>
-        <label for="user">Name:</label>
-        <select id="user" name="user_id">
-            {% for user in all_users %}
-            <option value="{{ user.id }}">{{ user.name }}</option>
-        </select>
-    </div>
-
-    <button type="submit">Add Name</button>
-
+  <label for="name">Name:</label>
+  <input type="text" id="name" value="name" name="name">
+  <button type="submit">Add Name</button>
 </form>
 
+
+{% for user in all_users %}
+<form class="delete_user" action="/users/{{ user.id }}/delete" method='post'>
+    <li>{{ user.name }}
+    <button class="delete_button"type ="submit">Delete User</button>
+    </li>
+   
+</form>
+{% endfor %}
 {% endblock %}

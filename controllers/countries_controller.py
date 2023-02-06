@@ -7,10 +7,10 @@ import repositories.user_repository as user_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-@countries_blueprint.route("/countries/new")
+@countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
-    return render_template("counties/index.html", all_countries=countries)
+    return render_template("countries/index.html", all_countries=countries)
 
 @countries_blueprint.route("/countries", methods=["POST"])
 def create_country():
@@ -18,7 +18,7 @@ def create_country():
     capital = request.form['capital']
     currency = request.form['currency']
     review = request.form['review']
-    user = user_repository.select(user_id)
+    user = user_repository.select('user_id')
     country = Country(name, capital, currency, review, user)
     country_repository.save(country)
     return redirect("/countries")
@@ -49,7 +49,7 @@ def update_country(id):
 def delete_country(id):
     country_repository.delete(id)
     return redirect("/countries")
-    
+
 
 
 
