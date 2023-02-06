@@ -3,19 +3,20 @@
 <form action="/countries" method="post">
   <label for="name">Country:</label>
   <input type="text" id="country_name" name="name" />
-  <button type="submit">Add Name</button>
+ 
 
   <label for="capital">Capital:</label>
   <input type="text" id="capital" name="capital" />
-  <button type="submit">Add Capital</button>
+
 
   <label for="currency">Currency:</label>
   <input type="text" id="currency" name="currency" />
-  <button type="submit">Currency</button>
+ 
 
   <label for="review">Review:</label>
   <input type="text" id="review" name="review" />
-  <button type="submit">Add Review:</button>
+
+  <button type="submit">Add Destination</button>
 </form>
 
 {% for country in countries %}
