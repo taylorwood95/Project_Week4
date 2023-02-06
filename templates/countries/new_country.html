@@ -23,18 +23,21 @@
   <button type="submit">Add Destination</button>
 </form>
 
-{% for country in countries %}
-{{ country.name }}
+{% for country in all_countries %}
+
+Country: {{ country.name }} 
+Capital: {{ country.capital }} 
+Currency: {{ country.currency }} 
+Review: {{
+    country.review }}
+
 <form
   class="delete_country"
   action="/countries/{{ country.id }}/delete"
   method="post"
 >
-  <li>
-    {{ country.name }} {{ country.capital }} {{ country.currency }} {{
-    country.review }}
+   
     <button class="delete_country_button" type="submit">Delete Country:</button>
-  </li>
 </form>
 
 <a href="edit.html">Edit Destination</a>
