@@ -1,28 +1,34 @@
-{% extends "base.html" %} 
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <form action="/countries" method="post">
-    <label for="country_name">Name:</label>
-    <input type="text" id="country_name" name="country_name">
-    <button type="submit">Add Name</button>
+  <label for="country_name">Name:</label>
+  <input type="text" id="country_name" name="country_name" />
+  <button type="submit">Add Name</button>
 
-    <label for="capital">Capital:</label>
-    <input type="text" id="capital" name="capital">
-    <button type="submit">Add Capital</button>
+  <label for="capital">Capital:</label>
+  <input type="text" id="capital" name="capital" />
+  <button type="submit">Add Capital</button>
 
-    <label for="currency">Currency:</label>
-    <input type="text" id="currency" name="currency">
-    <button type="submit">Currency</button>
+  <label for="currency">Currency:</label>
+  <input type="text" id="currency" name="currency" />
+  <button type="submit">Currency</button>
 
-    <label for="review">Review:</label>
-    <input type="text" id="review" name="review">
-    <button type="submit">Add Review:</button>
+  <label for="review">Review:</label>
+  <input type="text" id="review" name="review" />
+  <button type="submit">Add Review:</button>
+</form>
 
-    
+{% for country in countries %}
 
+<form
+  class="delete_country"
+  action="/countries/{{ country.id }}/delete"
+  methods="post"
+>
+  <li>
+    {{ country.name }} {{ country.capital }} {{ country.currency }} {{ country.review }}
+    <button class="delete_country_button" type="submit">Delete Country:</button>
+  </li>
+</form>
 
-
-
-
-{% endblock %}
+{% endfor %} {% endblock %}
