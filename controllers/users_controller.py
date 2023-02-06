@@ -26,6 +26,7 @@ def show_user_by_id(id):
     user = user_repository.select(id)
     return render_template("users/<id>", methods=['GET'], user=user)
 
+# delete user by ID
 @users_blueprint.route("/users/<id>/delete", methods=["POST"])
 def delete_user(id):
     user = user_repository.delete(id)

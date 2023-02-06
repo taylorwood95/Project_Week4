@@ -9,9 +9,11 @@ import repositories.user_repository as user_repository
 def save(country):
     sql = "INSERT INTO countries (name, capital, currency, review, user_id) VALUES (%s, %s, %s, %s, %s) RETURNING *"
     values = [country.name, country.capital, country.currency, country.review, country.user.id]
+
     results = run_sql(sql, values)
-    id = results[0]['id']
-    country.id = id
+    country.id = results[0]['id']
+    
+    
     return country
 
 # Thus function selects all countries and creates a list of them

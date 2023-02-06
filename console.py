@@ -5,10 +5,10 @@ from models.users import User
 import repositories.country_repository as country_repository
 import repositories.user_repository as user_repository
 
-# user1 = User("Taylor")
-# user_repository.save(user1)
-# user2 = User("Mark")
-# user_repository.save(user2)
+user1 = User("Taylor")
+user_repository.save(user1)
+user2 = User("Mark")
+user_repository.save(user2)
 
 # user_repository.select_all()
 
@@ -20,9 +20,9 @@ import repositories.user_repository as user_repository
 # user3.name = "Brian"
 # user_repository.update(user3)
 
-# country1 = Country("Netherlands", "Amsterdam", "EURO", "The cheese is amazing!", user1)
-# country_repository.save(country1)
-# country2 = Country("Scotland", "Edinburgh", "pound", "It never stopped raining !", user2)
+country1 = Country("Netherlands", "Amsterdam", "EURO", "The cheese is amazing!", user1)
+country_repository.save(country1)
+country2 = Country("Scotland", "Edinburgh", "pound", "It never stopped raining !", user2)
 
 # country_repository.select_all()
 # pdb.set_trace()
