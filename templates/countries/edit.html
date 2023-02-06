@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<form action="/country/{{country.id}}/edit" method="post">
+<form action="/countries/{{country.id}}/edit" method="post">
     <div>
       <label for="user">User:</label>
-      <input type="text" id="description" name="description" value="{{user.id}}" required autofocus>
+      <input type="text" id="description" name="description" value="{{user.name}}" required autofocus>
     </div>
     <div>
         <label for="country">Country:</label>

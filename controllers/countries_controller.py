@@ -28,20 +28,20 @@ def create_country():
     country_repository.save(country)
     return redirect("/countries")
 
-@countries_blueprint.route("/countries/<id>", methods=["GET"])
+@countries_blueprint.route("/countries/<int:id>", methods=["GET"])
 def show_country(id):
     
     country = country_repository.select(id)
    
-    return render_template("countries/show.html",country=country)
+    return render_template("/countries/show.html",country=country)
 
-@countries_blueprint.route("/countries/<id>/edit", methods=["GET"])
+@countries_blueprint.route("/countries/<int:id>/edit", methods=["GET"])
 def edit_country(id):
     country = country_repository.select(id)
-    users = user_repository.select_all()
-    return render_template("countries/edit.html", country=country, all_users=users)
+    user = user_repository.select(country.user.id)
+    return render_template("countries/edit.html", country=country, user=user)
 
-@countries_blueprint.route("/countries/<id>/edit", methods=['POST'])
+@countries_blueprint.route("/countries/<int:id>/edit", methods=['POST'])
 def update_country(id):
     user_id  = request.form['user_id']
     name = request.form['name']
