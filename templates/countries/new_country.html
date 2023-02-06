@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block content %}
 
 <form action="/countries" method="post">
-  <label for="country_name">Name:</label>
-  <input type="text" id="country_name" name="country_name" />
+  <label for="name">Name:</label>
+  <input type="text" id="country_name" name="name" />
   <button type="submit">Add Name</button>
 
   <label for="capital">Capital:</label>
@@ -26,7 +26,8 @@
   methods="post"
 >
   <li>
-    {{ country.name }} {{ country.capital }} {{ country.currency }} {{ country.review }}
+    {{ country.name }} {{ country.capital }} {{ country.currency }} {{
+    country.review }}
     <button class="delete_country_button" type="submit">Delete Country:</button>
   </li>
 </form>
