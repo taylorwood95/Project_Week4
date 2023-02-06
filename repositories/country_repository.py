@@ -36,12 +36,13 @@ def select(id):
     country = None 
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
-    results = run_sql(sql, values)
+    results = run_sql(sql, values)[0]
+    pdb.set_trace()
 
-    if results:
+    if results is not None:
         result = results [0]
-        country_id = user_repository.select(result['user_id'])
-        country = Country(result['name'], result['capital'], result['currency'], result['review'], country_id, result['id'])
+        user = user_repository.select(result['user_id'])
+        country = Country(result['name'], result['capital'], result['currency'], result['review'], user , result['id'])
     return country
 
 # This function deletes a specifiv country by ID

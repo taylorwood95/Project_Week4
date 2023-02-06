@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{country.description}}</p>
+    <hr>
+    <p>{{country.user.name}}</p>
+
+    <p><a href="/countries/{{country.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}
