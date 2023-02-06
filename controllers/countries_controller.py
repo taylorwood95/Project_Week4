@@ -10,7 +10,7 @@ countries_blueprint = Blueprint("countries", __name__)
 @countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
-    return render_template("countries/index.html", all_countries=countries)
+    return render_template("/countries/new_country.html", all_countries=countries)
 
 @countries_blueprint.route("/countries", methods=["POST"])
 def create_country():
