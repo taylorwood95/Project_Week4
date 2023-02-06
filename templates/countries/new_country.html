@@ -1,17 +1,21 @@
 {% extends "base.html" %} {% block content %}
 
 <form action="/countries" method="post">
+  <label for="users">User:</label>
+  <select id="user" name="user_id">
+    {% for user in all_users %}
+    <option value="{{ user.id }}">{{ user.name }}</option>
+    {% endfor %}
+  </select>
+
   <label for="name">Country:</label>
   <input type="text" id="country_name" name="name" />
- 
 
   <label for="capital">Capital:</label>
   <input type="text" id="capital" name="capital" />
 
-
   <label for="currency">Currency:</label>
   <input type="text" id="currency" name="currency" />
- 
 
   <label for="review">Review:</label>
   <input type="text" id="review" name="review" />
@@ -20,17 +24,19 @@
 </form>
 
 {% for country in countries %}
-
+{{ country.name }}
 <form
   class="delete_country"
   action="/countries/{{ country.id }}/delete"
-  methods="post"
+  method="post"
 >
   <li>
     {{ country.name }} {{ country.capital }} {{ country.currency }} {{
-    country.review }} 
+    country.review }}
     <button class="delete_country_button" type="submit">Delete Country:</button>
   </li>
 </form>
+
+<a href="edit.html">Edit Destination</a>
 
 {% endfor %} {% endblock %}
