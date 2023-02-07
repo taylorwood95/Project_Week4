@@ -1,0 +1,13 @@
+.menu {color: red;
+background-color: lightblue;
+display: flexbox;
+font-family: Arial, Helvetica, sans-serif;
+};
+
+#home-image {
+    width:100vw;
+    height:100vh;
+    background-image: url('images/homepage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  };
