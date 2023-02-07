@@ -44,10 +44,10 @@ def show_country(id):
 def edit_country(id):
     country = country_repository.select(id)
     users = user_repository.select_all()
-    return render_template("countries/edit.html", country=country, user=users)
+    return render_template("countries/edit.html", country=country, users=users)
 
 
-@countries_blueprint.route("/countries/<id>", methods=["POST"])
+@countries_blueprint.route("/countries/<int:id>", methods=["POST"])
 def update_country(id):
     # user_id = request.form["user_id"]
     name = request.form["name"]

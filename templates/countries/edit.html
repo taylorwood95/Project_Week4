@@ -3,14 +3,19 @@
 {% block content %}
 
 <form action="/countries/{{country.id}}" method="post">
-    
-        <div>
-            <label for="user_id">User:</label>
+    <div>
+        <label for="user_id">User:</label>
+        <select id="user_id" name="user_id">
+          {% for user  in users %}
+            <option value="{{ user.id }}"
+              {% if country.user.id == user.id %} selected="selected"{% endif %}>
+              {{ user.name }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
 
-                <input type="text" id="user" name="user_id" value="{{ user.id }}" required autofocus>
-      
-        </div>
-    </div>
+    
     <div>
         <label for="country">Country:</label>
         <input type="text" id="country" name="name" value="{{country.name}}" required>

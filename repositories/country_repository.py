@@ -60,6 +60,6 @@ def delete(id):
 def update(country):
     sql = "UPDATE countries SET (name, capital, currency, review, user_id) = (%s,%s,%s,%s,%s) WHERE id = %s"
     values = [country.name, country.capital, country.currency, country.review, country.user.id, country.id]
-    pdb.set_trace()
+    # pdb.set_trace()
     run_sql(sql, values)    
     print(values)
