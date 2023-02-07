@@ -31,6 +31,19 @@
     <div>
         <label for="review">Review:</label>
         <input type="text" id="review" name="review" value="{{country.review}}" required>
+    </div>
+    <label for="visited">Visited:</label>
+    <select id="visited" name="visited">
+      <option value="true"
+      {% if country.visited == True %} selected="selected" {% endif %}>
+      True
+      </option>
+  
+      <option value="false"
+      {% if country.visited == False %} selected="selected" {% endif %}>
+      False
+      </option>
+  </select>
 
         <button class="update_button" type="submit">Update</button>
 </form>

@@ -50,14 +50,16 @@ def edit_country(id):
 
 @countries_blueprint.route("/countries/<int:id>", methods=["POST"])
 def update_country(id):
-    # user_id = request.form["user_id"]
+    
     name = request.form["name"]
     capital = request.form["capital"]
     currency = request.form["currency"]
     review = request.form["review"]
+    visited = request.form["visited"]
+
     user = user_repository.select(request.form["user_id"])
-    # user = user_repository.select(user_id)
-    country = Country(name, capital, currency, review, user, id)
+   
+    country = Country(name, capital, currency, review, user, visited, id)
     country_repository.update(country)
     return redirect("/countries")
 
