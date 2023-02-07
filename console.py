@@ -30,15 +30,17 @@ country_repository.save(country2)
 country3 = Country("Germany", "Berlin","EURO","Too many Germans", user_3, True )
 country_repository.save(country3)
 
-# country_repository.select_all()
-# pdb.set_trace()
+# result = country_repository.select_all()
 
-# country_repository.select(5)
-# pdb.set_trace()
+
+# result = country_repository.select(2)
+
 
 # country_repository.delete(5)
 
-# country3 = country_repository.select(3)
-# country3.capital = 'The Hague'
-# country_repository.update(country3)
+country3 = country_repository.select(3)
+country3.capital = 'The Hague'
+country_repository.update(country3)
+result = country3
+pdb.set_trace()
 

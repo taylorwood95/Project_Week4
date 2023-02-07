@@ -25,6 +25,7 @@ def create_country():
     capital = request.form["capital"]
     currency = request.form["currency"]
     review = request.form["review"]
+    
 
     user = user_repository.select(user_id)
     country = Country(name, capital, currency, review, user)
