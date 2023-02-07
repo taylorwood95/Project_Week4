@@ -25,10 +25,10 @@ def create_country():
     capital = request.form["capital"]
     currency = request.form["currency"]
     review = request.form["review"]
-    
+    visited = request.form["visited"]
 
     user = user_repository.select(user_id)
-    country = Country(name, capital, currency, review, user)
+    country = Country(name, capital, currency, review, user, visited)
     country_repository.save(country)
     return redirect("/countries")
 

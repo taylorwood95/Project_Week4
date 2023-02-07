@@ -20,16 +20,23 @@
   <label for="review">Review:</label>
   <input type="text" id="review" name="review" />
 
+  <label for="visited">Visited:</label>
+  <select id="visited" name="visited">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
   <button type="submit">Add Destination</button>
 </form>
 
 {% for country in all_countries %}
-
+User:  {{ country.user.name }}
 Country: {{ country.name }} 
 Capital: {{ country.capital }} 
 Currency: {{ country.currency }} 
 Review: {{
     country.review }}
+Visited: {{ country.visited }}
 
 <form
   class="delete_country"
