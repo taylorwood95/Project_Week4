@@ -29,6 +29,7 @@
   <button type="submit">Add Destination</button>
 </form>
 
+<section class="destination-loop"
 {% for country in all_countries %}
 User:  {{ country.user.name }}
 Country: {{ country.name }} 
@@ -49,4 +50,6 @@ Visited: {{ country.visited }}
 
 <a href="/countries/{{country.id}}/edit">Edit Destination</a>
 
-{% endfor %} {% endblock %}
+{% endfor %} 
+</section>
+{% endblock %}

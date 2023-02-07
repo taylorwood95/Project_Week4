@@ -7,18 +7,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Trip Planner</title>
     </head>
     <body>
         <header>
             <nav>
-                <ul class = "menu">
+                <div class="base-menu">
+                <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/users">Add User</a></li>
-                    <li><a href="/countries">Add Destination</a></li>
-                    <li><a href="/countries/<id>">Upcoming Holidays</a></li>
+                    <li><a href="/users">Users</a></li>
+                    <li><a href="/countries">Destinations</a></li>
+                </div>
+                    
                    
                 </ul>
             </nav>
+        
         </header>
         <div class="container">
             {% block content %}
