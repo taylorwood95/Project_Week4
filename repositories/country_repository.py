@@ -7,8 +7,8 @@ import repositories.user_repository as user_repository
 # This function saves new countries to database
 
 def save(country):
-    sql = "INSERT INTO countries (name, capital, currency, review, user_id) VALUES (%s, %s, %s, %s, %s) RETURNING *"
-    values = [country.name, country.capital, country.currency, country.review, country.user.id]
+    sql = "INSERT INTO countries (name, capital, currency, review, user_id, visited) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
+    values = [country.name, country.capital, country.currency, country.review, country.user.id, country.visited]
 
     results = run_sql(sql, values)
     id = results[0]['id']
