@@ -11,7 +11,8 @@ def save(country):
     values = [country.name, country.capital, country.currency, country.review, country.user.id]
 
     results = run_sql(sql, values)
-    country.id = results[0]['id']
+    id = results[0]['id']
+    country.id = id
    
 
     return country
@@ -59,4 +60,6 @@ def delete(id):
 def update(country):
     sql = "UPDATE countries SET (name, capital, currency, review, user_id) = (%s,%s,%s,%s,%s) WHERE id = %s"
     values = [country.name, country.capital, country.currency, country.review, country.user.id, country.id]
-    run_sql(sql, values)
+    pdb.set_trace()
+    run_sql(sql, values)    
+    print(values)
