@@ -12,7 +12,8 @@ CREATE TABLE countries (
     capital VARCHAR (255),
     currency VARCHAR (255),
     review text,
-    user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE
+    user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    visited BOOLEAN
 
 );
 
