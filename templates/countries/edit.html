@@ -2,9 +2,9 @@
 
 {% block content %}
 
-<form action="/countries/{{country.id}}" method="post">
+<form class="edit-form" action="/countries/{{country.id}}" method="post">
     <div>
-        <label for="user_id">User:</label>
+        <label class="user-id-edit" for="user_id">User:</label>
         <select id="user_id" name="user_id">
           {% for user  in users %}
             <option value="{{ user.id }}"
