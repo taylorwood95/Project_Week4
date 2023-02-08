@@ -5,7 +5,7 @@
 <form class="edit-form" action="/countries/{{country.id}}" method="post">
     <div>
         <label class="user-id-edit" for="user_id">User:</label>
-        <select id="user_id" name="user_id">
+        <select class="user-edit-select" id="user_id" name="user_id">
           {% for user  in users %}
             <option value="{{ user.id }}"
               {% if country.user.id == user.id %} selected="selected"{% endif %}>
@@ -17,23 +17,23 @@
 
     
     <div>
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="name" value="{{country.name}}" required>
+        <label class ="country-edit" for="country">Country:</label>
+        <input class="country-edit-input" type="text" id="country" name="name" value="{{country.name}}" required>
     </div>
     <div>
         <label for="capital">Capital:</label>
-        <input type="text" id="capital" name="capital" value="{{country.capital}}" required>
+        <input class="capital-edit-input" type="text" id="capital" name="capital" value="{{country.capital}}" required>
     </div>
     <div>
         <label for="currency">Currency:</label>
-        <input type="text" id="country" name="currency" value="{{country.currency}}" required]>
+        <input class="currency-edit-input" type="text" id="country" name="currency" value="{{country.currency}}" required]>
     </div>
     <div>
         <label for="review">Review:</label>
-        <input type="text" id="review" name="review" value="{{country.review}}" required>
+        <input class="review-edit-input" type="text" id="review" name="review" value="{{country.review}}" required>
     </div>
     <label for="visited">Visited:</label>
-    <select id="visited" name="visited">
+    <select class="visited-edit"id="visited" name="visited">
       <option value="true"
       {% if country.visited == True %} selected="selected" {% endif %}>
       True
@@ -45,7 +45,7 @@
       </option>
   </select>
 
-        <button class="update_button" type="submit">Update</button>
+        <button class="update-button-edit" type="submit">Update</button>
 </form>
   
 

@@ -208,10 +208,52 @@ body {
 .edit-form {
   color: white;
   display: flex;
+  gap: 10px;
   justify-content: center;
   font-size: x-large;
 }
 
 .user-id-edit {
   color: white;
+}
+
+.user-edit-select {
+  border-radius: 1rem;
+  border-color: white;
+  color: orangered;
+}
+
+.country-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.capital-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.currency-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.review-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.visited-edit {
+  border-radius: 1rem;
+  border-color: white;
+  color: orangered;
+}
+
+.update-button-edit {
+  background-color: white;
+  border-radius: 1rem;
+  background: transparent;
+  color: white;
+  border: 5cap;
+  border-color: white;
 }
