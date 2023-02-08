@@ -197,10 +197,10 @@ body {
   font-size: large;
   padding: 5px;
   text-align: center;
-
 }
 
 .new-country-form {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+
 }
