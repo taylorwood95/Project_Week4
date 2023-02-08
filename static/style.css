@@ -93,10 +93,20 @@ body {
   font-size: medium
 }
 
+.new-country-input {
+  border-radius: 1rem;
+  border-color: white;
+
+}
+
 .capital-label {
   color: white;
   font-size: medium
+}
 
+.capital-input {
+  border-radius: 1rem;
+  border-color: white;
 }
 
 .currency-label {
@@ -104,9 +114,19 @@ body {
   font-size: medium
 }
 
+.currency-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
 .review-label {
   color: white;
   font-size: medium
+}
+
+.review-input {
+  border-radius: 1rem;
+  border-color: white;
 }
 
 .visited-label {
@@ -129,4 +149,8 @@ body {
   border: 5cap;
   border-color: white;
 
+}
+
+.edit-destination-button {
+  
 }

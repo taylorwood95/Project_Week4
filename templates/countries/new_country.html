@@ -9,16 +9,16 @@
   </select>
 
   <label for="name"class="new-country-label">Country:</label>
-  <input type="text" id="country_name" name="name" />
+  <input type="text" class ="new-country-input" id="country_name" name="name" />
 
   <label for="capital"class="capital-label">Capital:</label>
-  <input type="text" id="capital" name="capital" />
+  <input type="text" class="capital-input"id="capital" name="capital" />
 
   <label for="currency"class="currency-label">Currency:</label>
-  <input type="text" id="currency" name="currency" />
+  <input type="text" class="currency-input" id="currency" name="currency" />
 
   <label for="review"class="review-label">Review:</label>
-  <input type="text" id="review" name="review" />
+  <input type="text" class ="review-input"id="review" name="review" />
 
   <label class="visited-label"for="visited">Visited:</label>
   <select id="visited" class="visit-select" name="visited">
@@ -29,7 +29,6 @@
   <button class="add-destination-button" type="submit">Add Destination</button>
 </form>
 
-<section class="destination-loop"
 {% for country in all_countries %}
 User:  {{ country.user.name }}
 Country: {{ country.name }} 
@@ -48,7 +47,7 @@ Visited: {{ country.visited }}
     <button class="delete_country_button" type="submit">Delete Country:</button>
 </form>
 
-<a href="/countries/{{country.id}}/edit">Edit Destination</a>
+<a class="edit-destination-button" href="/countries/{{country.id}}/edit">Edit Destination</a>
 
 {% endfor %} 
 </section>
