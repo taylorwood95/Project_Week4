@@ -152,5 +152,20 @@ body {
 }
 
 .edit-destination-button {
+  background-color: white;
+  border-radius: 1rem;
+  background: transparent;
+  color: white;
+  border: 5cap;
+  border-color: white;
   
+}
+
+.delete_country_button {
+  background-color: white;
+  border-radius: 1rem;
+  background: transparent;
+  color: white;
+  border: 5cap;
+  border-color: white;
 }
