@@ -74,3 +74,16 @@ body {
   border-radius: 1rem;
   border-color: white;
 }
+
+.new-country-user {
+  color: white;
+  font-size: medium
+
+}
+
+.user-select {
+  border-radius: 1rem;
+  border-color: white;
+  color: orangered;
+
+}

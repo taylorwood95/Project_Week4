@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% block content %}
 
 <form action="/countries" method="post">
-  <label for="users">User:</label>
-  <select id="user" name="user_id">
+  <label for="users"class="new-country-user">User:</label>
+  <select class="user-select" name="user_id">
     {% for user in all_users %}
     <option value="{{ user.id }}">{{ user.name }}</option>
     {% endfor %}
