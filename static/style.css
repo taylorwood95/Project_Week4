@@ -32,6 +32,7 @@ body {
 .new-user-label {
   color: white;
   font-size: larger;
+  align-content: center;
 
 
 }
@@ -39,17 +40,30 @@ body {
 .add-user-button {
   background-color: lightgrey;
   border-radius: 1rem;
+  background: transparent;
+  border: 5cap;
+  border-color: white;
+  color: white;
 }
 
 .delete-button {
   background-color: lightgrey;
   border-radius: 1rem;
+  background: transparent;
+  color: white;
+  border: 5cap;
+  border-color: white;
   
 
 }
 
 .user-name-list {
+  text-align: center;
   color: white;
   font-size: larger;
 
+}
+
+.user-form {
+  text-align: center;
 }
