@@ -169,3 +169,9 @@ body {
   border: 5cap;
   border-color: white;
 }
+
+.upcoming-trip {
+  color: white;
+  font-size: xx-large;
+  text-decoration: underline;
+}
