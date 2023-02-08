@@ -158,7 +158,17 @@ body {
   color: white;
   border: 5cap;
   border-color: white;
+  padding: 3%;
   
+}
+
+.edit_destination {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  color: white;
+  text-decoration: underline;
+
 }
 
 .delete_country_button {
@@ -168,10 +178,29 @@ body {
   color: white;
   border: 5cap;
   border-color: white;
-}
 
+}
+.delete_country {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+}
 .upcoming-trip {
   color: white;
   font-size: xx-large;
   text-decoration: underline;
+  text-align: center;
+}
+
+.destination-printout {
+  color: white;
+  font-size: large;
+  padding: 5px;
+  text-align: center;
+
+}
+
+.new-country-form {
+  display: flex;
+  justify-content: center;
 }

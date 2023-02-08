@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<form action="/countries" method="post">
+<form class="new-country-form" action="/countries" method="post">
   <label for="users"class="new-country-user">User:</label>
   <select class="user-select" name="user_id">
     {% for user in all_users %}
@@ -30,7 +30,9 @@
 </form>
 <header>
   <h1 class="upcoming-trip">Upcoming Trips</h1>
+
 {% for country in all_countries %}
+<div class="destination-printout">
 User:  {{ country.user.name }}
 Country: {{ country.name }} 
 Capital: {{ country.capital }} 
@@ -38,6 +40,8 @@ Currency: {{ country.currency }}
 Review: {{
     country.review }}
 Visited: {{ country.visited }}
+</div>
+
 
 <form
   class="delete_country"
@@ -47,9 +51,10 @@ Visited: {{ country.visited }}
    
     <button class="delete_country_button" type="submit">Delete Country:</button>
 </form>
-
+<form class="edit_destination">
 <a class="edit-destination-button" href="/countries/{{country.id}}/edit">Edit Destination</a>
-
+</form>
 {% endfor %} 
-</section>
+
+
 {% endblock %}
