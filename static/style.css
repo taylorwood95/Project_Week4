@@ -87,3 +87,46 @@ body {
   color: orangered;
 
 }
+
+.new-country-label {
+  color: white;
+  font-size: medium
+}
+
+.capital-label {
+  color: white;
+  font-size: medium
+
+}
+
+.currency-label {
+  color: white;
+  font-size: medium
+}
+
+.review-label {
+  color: white;
+  font-size: medium
+}
+
+.visited-label {
+  color: white;
+  font-size: medium
+}
+
+.visit-select {
+  border-radius: 1rem;
+  border-color: white;
+  color: orangered;
+
+}
+
+.add-destination-button {
+  background-color: white;
+  border-radius: 1rem;
+  background: transparent;
+  color: white;
+  border: 5cap;
+  border-color: white;
+
+}

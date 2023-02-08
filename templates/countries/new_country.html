@@ -6,27 +6,27 @@
     {% for user in all_users %}
     <option value="{{ user.id }}">{{ user.name }}</option>
     {% endfor %}
-  </select class ="new_country">
+  </select>
 
-  <label for="name">Country:</label>
+  <label for="name"class="new-country-label">Country:</label>
   <input type="text" id="country_name" name="name" />
 
-  <label for="capital">Capital:</label>
+  <label for="capital"class="capital-label">Capital:</label>
   <input type="text" id="capital" name="capital" />
 
-  <label for="currency">Currency:</label>
+  <label for="currency"class="currency-label">Currency:</label>
   <input type="text" id="currency" name="currency" />
 
-  <label for="review">Review:</label>
+  <label for="review"class="review-label">Review:</label>
   <input type="text" id="review" name="review" />
 
-  <label for="visited">Visited:</label>
-  <select id="visited" name="visited">
+  <label class="visited-label"for="visited">Visited:</label>
+  <select id="visited" class="visit-select" name="visited">
     <option value="true">True</option>
     <option value="false">False</option>
   </select>
 
-  <button type="submit">Add Destination</button>
+  <button class="add-destination-button" type="submit">Add Destination</button>
 </form>
 
 <section class="destination-loop"
