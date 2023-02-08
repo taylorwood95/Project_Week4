@@ -1,7 +1,7 @@
 body {
   width:100vw;
     height:100vh;
-    background-image: url('images/background.jpg');
+    background-image: url('images/airport_pic.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 };
@@ -26,6 +26,30 @@ body {
   color: white;
   text-decoration: underline;
   padding: 20px;
+  font-size: x-large;
+}
 
+.new-user-label {
+  color: white;
+  font-size: larger;
+
+
+}
+
+.add-user-button {
+  background-color: lightgrey;
+  border-radius: 1rem;
+}
+
+.delete-button {
+  background-color: lightgrey;
+  border-radius: 1rem;
   
+
+}
+
+.user-name-list {
+  color: white;
+  font-size: larger;
+
 }
