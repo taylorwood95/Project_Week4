@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<form class="edit-form" action="/countries/{{country.id}}" method="post">
+<form action="/countries/{{country.id}}" method="post">
     <div>
-        <label class="user-id-edit" for="user_id">User:</label>
-        <select class="user-edit-select" id="user_id" name="user_id">
+        <label for="user_id">User:</label>
+        <select id="user_id" name="user_id">
           {% for user  in users %}
             <option value="{{ user.id }}"
               {% if country.user.id == user.id %} selected="selected"{% endif %}>
