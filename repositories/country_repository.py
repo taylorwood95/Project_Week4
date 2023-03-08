@@ -75,7 +75,7 @@ def select(id):
     return country
 
 
-# This function deletes a specifiv country by ID
+# This function deletes a specific country by ID
 
 
 def delete(id):
