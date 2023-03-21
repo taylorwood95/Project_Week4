@@ -193,10 +193,21 @@ body {
 }
 
 .destination-printout {
-  color: white;
-  font-size: large;
-  padding: 5px;
+  color:white;
+  font-size: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: row wrap;
+  margin: 0 auto;
+  justify-content: center;
+  border: solid white;
+  width: 780px;
+}
+
+.destination-printout div {
+  
+  padding: 10px;
+  margin: 5px;
 }
 
 .new-country-form {
@@ -213,5 +224,76 @@ body {
 }
 
 .user-id-edit {
+  font-size: medium;
   color: white;
 }
+
+.user-edit-select {
+  border-radius: 1rem;
+  border-color: white;
+  color: orangered;
+}
+
+.country-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+  color: white;
+}
+
+.country-edit {
+  color: white;
+}
+
+.capital-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.capital-edit {
+  color: white;
+  font-size: medium;
+}
+
+.currency-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.currency-edit {
+  color: white;
+  font-size: medium;
+}
+
+.review-edit-input {
+  border-radius: 1rem;
+  border-color: white;
+}
+
+.review-edit {
+  color: white;
+  font-size: medium;
+}
+
+.visited-edit {
+  border-radius: 1rem;
+  border-color: white;
+  color: orangered;
+}
+
+.visited-label {
+  color: white;
+  font-size: medium;
+
+}
+
+.update-button-edit {
+  background-color: white;
+  border-radius: 1rem;
+  background: transparent;
+  color: white;
+  border: 5cap;
+  border-color: white;
+}
+
+
+

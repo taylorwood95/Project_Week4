@@ -30,16 +30,27 @@
 </form>
 <header>
   <h1 class="upcoming-trip">Upcoming Trips</h1>
-
 {% for country in all_countries %}
 <div class="destination-printout">
+  <div>
 User:  {{ country.user.name }}
+  </div>
+  <div>
 Country: {{ country.name }} 
+  </div>
+  <div>
 Capital: {{ country.capital }} 
+  </div>
+  <div>
 Currency: {{ country.currency }} 
+  </div>
+  <div>
 Review: {{
     country.review }}
+</div>
+<div>
 Visited: {{ country.visited }}
+</div>
 </div>
 
 
@@ -54,6 +65,7 @@ Visited: {{ country.visited }}
 <form class="edit_destination">
 <a class="edit-destination-button" href="/countries/{{country.id}}/edit">Edit Destination</a>
 </form>
+
 {% endfor %} 
 
 
