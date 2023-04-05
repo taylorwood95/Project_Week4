@@ -35,13 +35,13 @@
     <label  class="visited-label" for="visited">Visited:</label>
     <select class="visited-edit" id="visited" name="visited">
       <option   value="true"
-      {% if country.visited == True return "yes" %} selected="selected" {% endif %}>
-      True
+      {% if country.visited == True  %} selected="selected" {% endif %}>
+      Yes
       </option>
   
       <option value="false"
-      {% if country.visited == False return "No" %} selected="selected" {% endif %}>
-      False
+      {% if country.visited == False %} selected="selected" {% endif %}>
+      No
       </option>
   </select>
 
